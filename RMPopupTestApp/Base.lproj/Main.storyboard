@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="Symbol.ttf">
+            <string>Symbol</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RMPopupTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to RMAlert test App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tU-LT-N8i">
+                                <rect key="frame" x="-16" y="74" width="407" height="24"/>
+                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQz-o9-t5N">
+                                <rect key="frame" x="16" y="168" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1sP-4o-ObS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Checkbox Alert"/>
+                                <connections>
+                                    <action selector="checkboxAlertAction:" destination="BYZ-38-t0r" eventType="touchDown" id="fA2-H5-9GV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9d-Kq-E4o">
+                                <rect key="frame" x="16" y="248" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZA9-U4-b0F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Default Alert"/>
+                                <connections>
+                                    <action selector="defaultAlertAction:" destination="BYZ-38-t0r" eventType="touchDown" id="ITo-iW-GlQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sK5-Z2-3dm">
+                                <rect key="frame" x="16" y="328" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0s8-QU-YN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Subtitle Alert"/>
+                                <connections>
+                                    <action selector="subtitleAlertAction:" destination="BYZ-38-t0r" eventType="touchDown" id="TIk-Zq-XzE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A9d-Kq-E4o" secondAttribute="trailing" constant="16" id="5P9-hz-0mQ"/>
+                            <constraint firstItem="CQz-o9-t5N" firstAttribute="top" secondItem="6tU-LT-N8i" secondAttribute="bottom" constant="70" id="Ew7-kg-io0"/>
+                            <constraint firstItem="sK5-Z2-3dm" firstAttribute="top" secondItem="A9d-Kq-E4o" secondAttribute="bottom" constant="30" id="JX4-Q0-GFd"/>
+                            <constraint firstItem="A9d-Kq-E4o" firstAttribute="top" secondItem="CQz-o9-t5N" secondAttribute="bottom" constant="30" id="N2r-Ke-Rfg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sK5-Z2-3dm" secondAttribute="trailing" constant="16" id="RUC-wb-zng"/>
+                            <constraint firstItem="6tU-LT-N8i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-16" id="Ycc-RR-grp"/>
+                            <constraint firstItem="6tU-LT-N8i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="16" id="bzy-Wx-whI"/>
+                            <constraint firstItem="6tU-LT-N8i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="d0Z-EL-XPS"/>
+                            <constraint firstItem="A9d-Kq-E4o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="g4f-QZ-0Ys"/>
+                            <constraint firstItem="sK5-Z2-3dm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="j8S-Hg-ueL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sK5-Z2-3dm" secondAttribute="trailing" constant="16" id="mgp-IS-tDB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQz-o9-t5N" secondAttribute="trailing" constant="16" id="u8H-jb-mXY"/>
+                            <constraint firstItem="CQz-o9-t5N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vI8-XE-Bzh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

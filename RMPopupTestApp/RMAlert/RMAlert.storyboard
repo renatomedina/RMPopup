@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Museo700-Regular.otf">
+            <string>Museo700-Regular</string>
+        </array>
+        <array key="MuseoSans-500.otf">
+            <string>MuseoSans-500</string>
+        </array>
+        <array key="MuseoSans-700.otf">
+            <string>MuseoSans-700</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--AlertVC-->
+        <scene sceneID="HN9-dY-u7o">
+            <objects>
+                <viewController storyboardIdentifier="RMAlertVC" id="iIz-VE-eLg" customClass="RMAlertVC" customModule="RMPopupTestApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BLc-Jh-9iT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gp2-eC-SMJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uB2-EW-Czs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6m4-DE-ib2">
+                                <rect key="frame" x="30" y="271.5" width="314" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfM-SH-1j0">
+                                        <rect key="frame" x="14" y="14" width="286" height="19"/>
+                                        <fontDescription key="fontDescription" name="Museo700-Regular" family="Museo" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-fa-Fbt">
+                                        <rect key="frame" x="14" y="41" width="286" height="18"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMV-OC-rba">
+                                        <rect key="frame" x="266" y="79" width="48" height="37"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="14" minY="10" maxX="14" maxY="10"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" red="0.32156862749999998" green="0.18039215689999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapPositiveButton:" destination="iIz-VE-eLg" eventType="touchUpInside" id="KAA-Xq-ZC8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dui-4I-MW6">
+                                        <rect key="frame" x="192" y="79" width="70" height="37"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="14" minY="10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="CANCEL">
+                                            <color key="titleColor" red="0.32156862749999998" green="0.18039215689999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapNegativeButton:" destination="iIz-VE-eLg" eventType="touchUpInside" id="0zl-5N-XnG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4nc-fa-Fbt" firstAttribute="trailing" secondItem="pfM-SH-1j0" secondAttribute="trailing" id="981-7R-thC"/>
+                                    <constraint firstItem="Dui-4I-MW6" firstAttribute="top" secondItem="BMV-OC-rba" secondAttribute="top" id="C70-yJ-j6J"/>
+                                    <constraint firstItem="BMV-OC-rba" firstAttribute="leading" secondItem="Dui-4I-MW6" secondAttribute="trailing" constant="4" id="D21-FF-xhX"/>
+                                    <constraint firstItem="BMV-OC-rba" firstAttribute="top" secondItem="4nc-fa-Fbt" secondAttribute="bottom" constant="20" id="Fxg-Mf-0Z2"/>
+                                    <constraint firstItem="pfM-SH-1j0" firstAttribute="leading" secondItem="6m4-DE-ib2" secondAttribute="leading" constant="14" id="HAb-xj-d9V"/>
+                                    <constraint firstItem="4nc-fa-Fbt" firstAttribute="leading" secondItem="pfM-SH-1j0" secondAttribute="leading" id="Wn8-Qf-s0s"/>
+                                    <constraint firstItem="pfM-SH-1j0" firstAttribute="top" secondItem="6m4-DE-ib2" secondAttribute="top" constant="14" id="XmN-EW-Vwp"/>
+                                    <constraint firstAttribute="bottom" secondItem="BMV-OC-rba" secondAttribute="bottom" constant="8" id="adm-CP-9Gh"/>
+                                    <constraint firstAttribute="trailing" secondItem="pfM-SH-1j0" secondAttribute="trailing" constant="14" id="i2M-Ah-wqx"/>
+                                    <constraint firstAttribute="trailing" secondItem="BMV-OC-rba" secondAttribute="trailing" id="xO6-Yf-7Ee"/>
+                                    <constraint firstItem="4nc-fa-Fbt" firstAttribute="top" secondItem="pfM-SH-1j0" secondAttribute="bottom" constant="8" id="yrk-KR-z5Y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000718940000002" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6m4-DE-ib2" firstAttribute="centerY" secondItem="uB2-EW-Czs" secondAttribute="centerY" id="9Du-n6-egX"/>
+                            <constraint firstItem="6m4-DE-ib2" firstAttribute="centerX" secondItem="uB2-EW-Czs" secondAttribute="centerX" id="wfl-O7-63I"/>
+                            <constraint firstItem="6m4-DE-ib2" firstAttribute="leading" secondItem="uB2-EW-Czs" secondAttribute="leading" constant="30" id="yV6-gY-qgO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="6m4-DE-ib2" id="kNQ-F5-rO5"/>
+                        <outlet property="messageLabel" destination="4nc-fa-Fbt" id="Rbm-jW-o5q"/>
+                        <outlet property="negButton" destination="Dui-4I-MW6" id="2Wh-gC-hMH"/>
+                        <outlet property="posButton" destination="BMV-OC-rba" id="RhP-h1-mTk"/>
+                        <outlet property="titleLabel" destination="pfM-SH-1j0" id="hDj-g3-fBZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDI-Ct-EX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="146"/>
+        </scene>
+        <!--Alert CheckboxVC-->
+        <scene sceneID="dko-c5-7E2">
+            <objects>
+                <viewController storyboardIdentifier="RMAlertCheckboxVC" id="PSn-Ur-SBg" customClass="RMAlertCheckboxVC" customModule="RMPopupTestApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZKA-Kw-RRs"/>
+                        <viewControllerLayoutGuide type="bottom" id="AtS-2S-UsO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h4c-pa-5bW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hO-RT-aMg">
+                                <rect key="frame" x="30" y="241.5" width="314" height="184"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh0-4g-bWr">
+                                        <rect key="frame" x="14" y="14" width="286" height="19"/>
+                                        <fontDescription key="fontDescription" name="Museo700-Regular" family="Museo" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMW-jY-T7c">
+                                        <rect key="frame" x="14" y="41" width="286" height="18"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-Rq-FBr">
+                                        <rect key="frame" x="266" y="139" width="48" height="37"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="14" minY="10" maxX="14" maxY="10"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" red="0.32156862749999998" green="0.18039215689999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapPositiveButton:" destination="PSn-Ur-SBg" eventType="touchUpInside" id="4kz-NV-GE5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2K3-3N-EH3">
+                                        <rect key="frame" x="192" y="139" width="70" height="37"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="14" minY="10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="CANCEL">
+                                            <color key="titleColor" red="0.32156862749999998" green="0.18039215689999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapNegativeButton:" destination="PSn-Ur-SBg" eventType="touchUpInside" id="Ymh-QF-5sl"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="59a-P1-8RG">
+                                        <rect key="frame" x="14" y="67" width="284" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="RQP-jg-Xk6"/>
+                                        </constraints>
+                                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RMAlertCheckboxCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="RMAlertCheckboxCell" id="ZQb-qb-14Q" customClass="RMAlertCheckboxCell" customModule="RMPopupTestApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1" width="284" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZQb-qb-14Q" id="3nR-Sg-cR8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="284" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clF-C7-q0H">
+                                                            <rect key="frame" x="0.0" y="12" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="7HH-5k-cCl"/>
+                                                                <constraint firstAttribute="width" constant="20" id="e9U-cY-JgI"/>
+                                                            </constraints>
+                                                            <state key="normal" image="ic_radio_off"/>
+                                                            <state key="selected" image="ic_radio_on"/>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1M-eY-YKz">
+                                                            <rect key="frame" x="28" y="12.5" width="248" height="18"/>
+                                                            <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="clF-C7-q0H" firstAttribute="centerY" secondItem="3nR-Sg-cR8" secondAttribute="centerY" id="0D9-72-DmJ"/>
+                                                        <constraint firstItem="clF-C7-q0H" firstAttribute="leading" secondItem="3nR-Sg-cR8" secondAttribute="leading" id="6Wr-bu-Pmg"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="D1M-eY-YKz" secondAttribute="trailing" id="Dwv-1N-iC3"/>
+                                                        <constraint firstItem="D1M-eY-YKz" firstAttribute="leading" secondItem="clF-C7-q0H" secondAttribute="trailing" constant="8" id="UfA-UV-Db0"/>
+                                                        <constraint firstItem="D1M-eY-YKz" firstAttribute="centerY" secondItem="clF-C7-q0H" secondAttribute="centerY" id="hFH-v9-dUY"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="btnCheckbox" destination="clF-C7-q0H" id="9wN-9E-pNZ"/>
+                                                    <outlet property="lblText" destination="D1M-eY-YKz" id="OtQ-UG-fj8"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="PSn-Ur-SBg" id="tZw-9e-Wp6"/>
+                                            <outlet property="delegate" destination="PSn-Ur-SBg" id="zvg-kl-QaZ"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="BMW-jY-T7c" firstAttribute="trailing" secondItem="jh0-4g-bWr" secondAttribute="trailing" id="55H-SC-E2I"/>
+                                    <constraint firstItem="b5d-Rq-FBr" firstAttribute="leading" secondItem="2K3-3N-EH3" secondAttribute="trailing" constant="4" id="BkC-95-aAN"/>
+                                    <constraint firstItem="BMW-jY-T7c" firstAttribute="top" secondItem="jh0-4g-bWr" secondAttribute="bottom" constant="8" id="FQq-lH-VtT"/>
+                                    <constraint firstItem="2K3-3N-EH3" firstAttribute="top" secondItem="b5d-Rq-FBr" secondAttribute="top" id="GP4-wz-yiQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="jh0-4g-bWr" secondAttribute="trailing" constant="14" id="ROW-jF-19k"/>
+                                    <constraint firstAttribute="bottom" secondItem="b5d-Rq-FBr" secondAttribute="bottom" constant="8" id="Tg6-dV-5CM"/>
+                                    <constraint firstItem="b5d-Rq-FBr" firstAttribute="top" secondItem="59a-P1-8RG" secondAttribute="bottom" constant="8" id="bTq-wl-A84"/>
+                                    <constraint firstItem="jh0-4g-bWr" firstAttribute="leading" secondItem="3hO-RT-aMg" secondAttribute="leading" constant="14" id="dR5-7J-01l"/>
+                                    <constraint firstAttribute="trailing" secondItem="59a-P1-8RG" secondAttribute="trailing" constant="16" id="gDn-ow-Et6"/>
+                                    <constraint firstItem="59a-P1-8RG" firstAttribute="leading" secondItem="BMW-jY-T7c" secondAttribute="leading" id="gbQ-aG-Gn0"/>
+                                    <constraint firstItem="jh0-4g-bWr" firstAttribute="top" secondItem="3hO-RT-aMg" secondAttribute="top" constant="14" id="ifW-cX-jEI"/>
+                                    <constraint firstAttribute="trailing" secondItem="b5d-Rq-FBr" secondAttribute="trailing" id="jPc-pr-a5u"/>
+                                    <constraint firstItem="BMW-jY-T7c" firstAttribute="leading" secondItem="jh0-4g-bWr" secondAttribute="leading" id="t49-kP-ewt"/>
+                                    <constraint firstItem="59a-P1-8RG" firstAttribute="top" secondItem="BMW-jY-T7c" secondAttribute="bottom" constant="8" id="yL2-OV-PGo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000718940000002" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3hO-RT-aMg" firstAttribute="centerY" secondItem="h4c-pa-5bW" secondAttribute="centerY" id="fP7-pf-Bu6"/>
+                            <constraint firstItem="3hO-RT-aMg" firstAttribute="leading" secondItem="h4c-pa-5bW" secondAttribute="leading" constant="30" id="npb-XN-sZx"/>
+                            <constraint firstItem="3hO-RT-aMg" firstAttribute="centerX" secondItem="h4c-pa-5bW" secondAttribute="centerX" id="rnK-0F-Yuo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertHeight" destination="RQP-jg-Xk6" id="6x5-E4-Pmm"/>
+                        <outlet property="alertView" destination="3hO-RT-aMg" id="1Pj-b8-wur"/>
+                        <outlet property="messageLabel" destination="BMW-jY-T7c" id="roZ-0E-Od0"/>
+                        <outlet property="negButton" destination="2K3-3N-EH3" id="woj-eZ-Wt3"/>
+                        <outlet property="posButton" destination="b5d-Rq-FBr" id="xau-Iv-4Z9"/>
+                        <outlet property="tbView" destination="59a-P1-8RG" id="0kZ-Hz-w3G"/>
+                        <outlet property="titleLabel" destination="jh0-4g-bWr" id="rvY-XW-R4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNd-Ob-tqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1352.8" y="143.47826086956522"/>
+        </scene>
+        <!--Subtitle AlertVC-->
+        <scene sceneID="PwX-Gi-xQN">
+            <objects>
+                <viewController storyboardIdentifier="RMSubtitleAlertVC" id="oAJ-HX-OW1" customClass="RMSubtitleAlertVC" customModule="RMPopupTestApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IyS-oN-H4e"/>
+                        <viewControllerLayoutGuide type="bottom" id="5m4-KK-nJt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J49-LF-af1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSP-oq-lg1">
+                                <rect key="frame" x="30" y="256.5" width="314" height="154"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F7-Y5-1hY">
+                                        <rect key="frame" x="14" y="14" width="286" height="19"/>
+                                        <fontDescription key="fontDescription" name="Museo700-Regular" family="Museo" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtM-aV-ew1">
+                                        <rect key="frame" x="14" y="72" width="286" height="17"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d56-bX-EY9">
+                                        <rect key="frame" x="14" y="43" width="284" height="18"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSO-e4-PAK">
+                                        <rect key="frame" x="266" y="109" width="48" height="37"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="14" minY="10" maxX="14" maxY="10"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" red="0.32156862749999998" green="0.18039215689999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapPositiveButton:" destination="oAJ-HX-OW1" eventType="touchUpInside" id="Tnb-9y-tDf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU2-Wo-v3J">
+                                        <rect key="frame" x="192" y="109" width="70" height="37"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="14" minY="10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="CANCEL">
+                                            <color key="titleColor" red="0.32156862749999998" green="0.18039215689999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapNegativeButton:" destination="oAJ-HX-OW1" eventType="touchUpInside" id="inH-qw-0AK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="d56-bX-EY9" secondAttribute="trailing" constant="16" id="8nX-Tx-Chz"/>
+                                    <constraint firstItem="EtM-aV-ew1" firstAttribute="trailing" secondItem="7F7-Y5-1hY" secondAttribute="trailing" id="9vl-oD-sav"/>
+                                    <constraint firstItem="IU2-Wo-v3J" firstAttribute="top" secondItem="fSO-e4-PAK" secondAttribute="top" id="A4t-2X-4hC"/>
+                                    <constraint firstAttribute="trailing" secondItem="fSO-e4-PAK" secondAttribute="trailing" id="Cyf-y0-Iyo"/>
+                                    <constraint firstItem="EtM-aV-ew1" firstAttribute="leading" secondItem="7F7-Y5-1hY" secondAttribute="leading" id="Cyw-1v-1IU"/>
+                                    <constraint firstItem="7F7-Y5-1hY" firstAttribute="leading" secondItem="CSP-oq-lg1" secondAttribute="leading" constant="14" id="DEM-Jc-8Mn"/>
+                                    <constraint firstItem="EtM-aV-ew1" firstAttribute="top" secondItem="d56-bX-EY9" secondAttribute="bottom" constant="11" id="HhW-Iz-8BT"/>
+                                    <constraint firstAttribute="trailing" secondItem="7F7-Y5-1hY" secondAttribute="trailing" constant="14" id="IQ8-ow-Qsy"/>
+                                    <constraint firstItem="7F7-Y5-1hY" firstAttribute="top" secondItem="CSP-oq-lg1" secondAttribute="top" constant="14" id="Rjh-s4-awn"/>
+                                    <constraint firstItem="fSO-e4-PAK" firstAttribute="top" secondItem="EtM-aV-ew1" secondAttribute="bottom" constant="20" id="WxF-xJ-acI"/>
+                                    <constraint firstItem="d56-bX-EY9" firstAttribute="top" secondItem="7F7-Y5-1hY" secondAttribute="bottom" constant="10" id="hII-RT-64Y"/>
+                                    <constraint firstItem="fSO-e4-PAK" firstAttribute="leading" secondItem="IU2-Wo-v3J" secondAttribute="trailing" constant="4" id="pys-rY-oxg"/>
+                                    <constraint firstAttribute="bottom" secondItem="fSO-e4-PAK" secondAttribute="bottom" constant="8" id="x8d-Qp-niL"/>
+                                    <constraint firstItem="d56-bX-EY9" firstAttribute="leading" secondItem="7F7-Y5-1hY" secondAttribute="leading" id="xUO-6Z-Sxv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000718940000002" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CSP-oq-lg1" firstAttribute="centerX" secondItem="J49-LF-af1" secondAttribute="centerX" id="AtE-fX-syA"/>
+                            <constraint firstItem="CSP-oq-lg1" firstAttribute="leading" secondItem="J49-LF-af1" secondAttribute="leading" constant="30" id="doV-fy-jXO"/>
+                            <constraint firstItem="CSP-oq-lg1" firstAttribute="centerY" secondItem="J49-LF-af1" secondAttribute="centerY" id="mkm-Nq-Ppu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="CSP-oq-lg1" id="s9h-r2-5nl"/>
+                        <outlet property="messageLabel" destination="EtM-aV-ew1" id="vzp-DP-P70"/>
+                        <outlet property="negButton" destination="IU2-Wo-v3J" id="ZA0-DS-bEw"/>
+                        <outlet property="posButton" destination="fSO-e4-PAK" id="GQ7-FK-mPR"/>
+                        <outlet property="subtitleLabel" destination="d56-bX-EY9" id="bFQ-kE-gob"/>
+                        <outlet property="titleLabel" destination="7F7-Y5-1hY" id="ine-n9-sDM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfV-eW-vk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="145"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_radio_off" width="24" height="24"/>
+        <image name="ic_radio_on" width="24" height="24"/>
+    </resources>
+</document>
