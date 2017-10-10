@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 extension ViewController {
     @IBAction func checkboxAlertAction(_ sender: UIButton?) {
     
-        let alert = AlertsUtil.shared.showCheckboxAlert(title: "Checkbox title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique faucibus eros a porttitor.", okText: "PRÓXIMO", items:  ["Item 1", "Item 2"])
+        let alert = AlertsUtil.shared.showCheckboxAlert(title: "Checkbox title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique faucibus eros a porttitor.", okText: "OK", items:  ["Item 1", "Item 2"])
         alert?.delegate = self
     }
     
